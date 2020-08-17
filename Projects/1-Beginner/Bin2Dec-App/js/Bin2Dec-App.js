@@ -27,3 +27,13 @@ function toDec(str) {
     }
     return sum
 }
+
+function checkDec(str) {
+    let check = []
+    check = str.toString().split('').reverse()
+    let result = []
+    for (let i = 0; i < check.length; i++) {
+        result[i] = `(${check[i]} X 2^${i})`
+    }
+    return result.join(' + ')
+}
