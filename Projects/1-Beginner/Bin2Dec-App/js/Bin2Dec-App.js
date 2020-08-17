@@ -14,3 +14,16 @@ function toBin(number) {
     }
     return `(${number})10 (${result.reverse().join('')})2`
 }
+
+function toDec(str) {
+    let bin = []
+    bin = str.toString().split('').reverse()
+    let sum = 0
+
+    for (let i = 0; i <= bin.length; i++) {
+        if (bin[i] == 1) {
+            sum += bin[i] * (2 ** i)
+        }
+    }
+    return sum
+}
