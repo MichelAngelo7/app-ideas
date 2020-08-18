@@ -15,16 +15,17 @@ function toBin(number) {
     return `(${number})10 (${result.reverse().join('')})2`
 }
 
-function toDec(str) {
+function toDec() {
     let bin = []
-    bin = str.toString().split('').reverse()
+    bin = document.getElementById('binary').value.toString().split('').reverse()
+    console.log(bin)
     let sum = 0
     for (let i = 0; i <= bin.length; i++) {
         if (bin[i] == 1) {
             sum += bin[i] * (2 ** i)
         }
     }
-    return sum
+    return document.getElementById('resultDec').innerHTML = sum
 }
 
 function checkDec(str) {
