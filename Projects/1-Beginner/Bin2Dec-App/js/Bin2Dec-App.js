@@ -19,7 +19,6 @@ function toDec(str) {
     let bin = []
     bin = str.toString().split('').reverse()
     let sum = 0
-
     for (let i = 0; i <= bin.length; i++) {
         if (bin[i] == 1) {
             sum += bin[i] * (2 ** i)
@@ -35,5 +34,5 @@ function checkDec(str) {
     for (let i = 0; i < check.length; i++) {
         result[i] = `(${check[i]} X 2^${i})`
     }
-    return result.join(' + ')
+    return `${result.join(' + ')} = ${toDec(str)}`
 }
